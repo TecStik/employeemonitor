@@ -1,4 +1,25 @@
-     <div class="flex flex-col flex-grow border-4 border-gray-400 border-dashed bg-white rounded mt-4">
+import React from "react";
+import Navbar from "../../Navbar/Navbar";
+import { useState, useEffect } from "react";
+import { Button, Modal } from "antd";
+// import "./TaskTable.css";
+
+export default function TaskTable() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  return (
+    <>
+      {/* <Navbar /> */}
+      <h1 class="font-bold text-2xl text-gray-700">Task Table</h1>
+      <div class="flex flex-col flex-grow border-4 border-gray-400 border-dashed bg-white rounded mt-4">
         <div>
           <main class="bg-white-medium flex-1 p-3 overflow-hidden">
             <div class="flex flex-col">
@@ -67,41 +88,6 @@
               </div>
             </div>
           </main>
-
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-10 mx-auto">
-              <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-                  Task Record
-                </h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  dolorem quidem, eius nesciunt natus id harum accusantium
-                  debitis error doloribus ex tempora
-                </p>
-              </div>
-
-              {/* <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                      Learn More
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                      Button
-                    </button>
-                  </div> */}
-            </div>
-          </section>
         </div>
       </div>
 
@@ -222,3 +208,6 @@
           </div>
         </div>
       </Modal>
+    </>
+  );
+}

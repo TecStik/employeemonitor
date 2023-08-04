@@ -1,41 +1,52 @@
 import React from "react";
-
+import Navbar from "../../Navbar/Navbar";
+import { useState, useEffect } from "react";
+import "./Attendance.css";
 export default function AttendanceTable() {
+
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timerId = setInterval(refreshClock, 1000);
+    return function cleanup() {
+      clearInterval(timerId);
+    };
+  }, []);
+
+  function refreshClock() {
+    setDate(new Date());
+  }
+
   return (
     <>
-      <section class="text-gray-600 body-font">
-        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
-          Attendance Table
-        </h2>
-        <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-          <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-            <div class="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
-              <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                <span class="ml-4 flex items-start flex-col leading-none">
-                  <span class="title-font font-medium">In</span>
-                </span>
-              </button>
-              <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                <span class="ml-4 flex items-start flex-col leading-none">
-                  <span class="title-font font-medium">Out</span>
-                </span>
-              </button>
-            </div>
+      {/* <Navbar /> */}
+      <div class="flex flex-col flex-grow border-4 border-gray-400 border-dashed bg-white rounded mt-4">
+            <div>
+              <h1 class="title-font font-medium text-xl text-gray-900 container px-5 py-10 mx-auto flex flex-wrap">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </h1>
 
-            <h1 class="title-font font-medium text-3xl text-gray-900">
-              Slow-carb next level shoindcgoitch ethical authentic, poko
-              scenester
-            </h1>
-            <p class="leading-relaxed mt-4">
-              Poke slow-carb mixtape knausgaard, typewriter street art gentrify
-              hammock starladder roathse. Craies vegan tousled etsy austin.
-            </p>
-          </div>
-          <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-            <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
-              Chart
-            </h2>
-            {/* <div class="relative mb-4">
+              <div class="container px-5 py-5 mx-auto flex flex-wrap">
+                <div class="flex flex-wrap -mx-4 -mt-4 mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+                  <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+                    <h2 class="title-font font-medium text-2xl text-gray-900">
+                      4002
+                    </h2>
+                    <p class="leading-relaxed"> Attendance ID </p>
+                  </div>
+                  <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+                    <h2 class="title-font font-medium text-2xl text-gray-900">
+                      8/3/2023
+                    </h2>
+                    <p class="leading-relaxed">Date</p>
+                  </div>
+                </div>
+
+                <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full ">
+                  <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
+                    Chart
+                  </h2>
+                  {/* <div class="relative mb-4">
               <label for="full-name" class="leading-7 text-sm text-gray-600">
                 Full Name
               </label>
@@ -63,128 +74,181 @@ export default function AttendanceTable() {
             <p class="text-xs text-gray-500 mt-3">
               Literally you probably haven't heard of them jean shorts.
             </p> */}
-          </div>
-        </div>
-      </section>
+                </div>
+                <div class="flex flex-wrap -mx-4 py-5 mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+                  <div class="flex lg:flex-row md:flex-col">
+                    <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                      <svg
+                        class="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z" />
+                      </svg>
+                      <span class="ml-4 flex items-start flex-col leading-none">
+                        <span class="text-xs text-gray-600 mb-1">
+                          {date.toLocaleTimeString()}
+                        </span>
+                        <span class="title-font font-medium">Time In</span>
+                      </span>
+                    </button>
+                    <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+                      <svg
+                        class="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z" />
+                      </svg>
+                      <span class="ml-4 flex items-start flex-col leading-none">
+                        <span class="text-xs text-gray-600 mb-1">
+                          {date.toLocaleTimeString()}
+                        </span>
+                        <span class="title-font font-medium">Time Out</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              All Attendance Days:
-            </h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Whatever cardigan tote bag tumblr 
-            </p>
+              <section class="text-gray-600 body-font">
+                <div class="container px-5 py-10 mx-auto">
+                  <div class="flex flex-col text-center w-full mb-20">
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
+                      Attendance Record
+                    </h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo dolorem quidem, eius nesciunt natus id harum
+                      accusantium debitis error doloribus ex tempora
+                    </p>
+                  </div>
+                  <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                      Muhammad Faiz e Raza
+                    </a>
+                    <table class="table-auto w-full text-left whitespace-no-wrap">
+                      <thead>
+                        <tr>
+                          {/* <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                            Plan
+                          </th> */}
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                            Date
+                          </th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                            Day
+                          </th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                            Time In
+                          </th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                            Time Out
+                          </th>
+                          {/* <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th> */}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="px-4 py-3">Start</td>
+                          <td class="px-4 py-3">5 Mb/s</td>
+                          <td class="px-4 py-3">15 GB</td>
+                          <td class="px-4 py-3 text-lg text-gray-900">Free</td>
+                          {/* <td class="w-10 text-center">
+                            <input name="plan" type="radio" />
+                          </td> */}
+                        </tr>
+                        <tr>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            Pro
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            25 Mb/s
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            25 GB
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">
+                            $24
+                          </td>
+                          {/* <td class="border-t-2 border-gray-200 w-10 text-center">
+                            <input name="plan" type="radio" />
+                          </td> */}
+                        </tr>
+                        <tr>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            Business
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            36 Mb/s
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">
+                            40 GB
+                          </td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">
+                            $50
+                          </td>
+                          {/* <td class="border-t-2 border-gray-200 w-10 text-center">
+                            <input name="plan" type="radio" />
+                          </td> */}
+                        </tr>
+                        <tr>
+                          <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                            Exclusive
+                          </td>
+                          <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                            48 Mb/s
+                          </td>
+                          <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                            120 GB
+                          </td>
+                          <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">
+                            $72
+                          </td>
+                          {/* <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+                            <input name="plan" type="radio" />
+                          </td> */}
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  {/* <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                      Learn More
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                      Button
+                    </button>
+                  </div> */}
+                </div>
+              </section>
+            </div>
           </div>
-          <div class="flex flex-wrap -m-4 text-center">
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                {/* <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80" /> */}
-                <h2 class="text-gray-900 title-font font-medium text-left">
-                  Holden Caulfield
-                </h2>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Date</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Day</h2>
-                  <p class="text-gray-500">Monday</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Check In</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">
-                    Check Out
-                  </h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                {/* <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80" /> */}
-                <h2 class="text-gray-900 title-font font-medium text-left">
-                  Holden Caulfield
-                </h2>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Date</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Day</h2>
-                  <p class="text-gray-500">Monday</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Check In</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">
-                    Check Out
-                  </h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                {/* <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80" /> */}
-                <h2 class="text-gray-900 title-font font-medium text-left">
-                  Holden Caulfield
-                </h2>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Date</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Day</h2>
-                  <p class="text-gray-500">Monday</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Check In</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">
-                    Check Out
-                  </h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                {/* <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80" /> */}
-                <h2 class="text-gray-900 title-font font-medium text-left">
-                  Holden Caulfield
-                </h2>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Date</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Day</h2>
-                  <p class="text-gray-500">Monday</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">Check In</h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-                <div class="flex justify-between">
-                  <h2 class="text-gray-900 title-font font-medium">
-                    Check Out
-                  </h2>
-                  <p class="text-gray-500">7/31/2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* <div class="flex flex-row min-h-screen bg-gray-100 text-gray-800 grid grid-cols-6 gap-4">
+        <div
+          class="main-content flex flex-col flex-grow p-4 px-4 col-span-5"
+          id="ScreenColum"
+        >
+        <h1 class="font-bold text-2xl text-gray-700">Dashboard</h1>
+
+        
         </div>
-      </section>
+      </div> */}
     </>
   );
 }

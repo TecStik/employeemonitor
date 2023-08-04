@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+    #ScreenColum {
+      grid-column-start: 1;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #ScreenColum {
+      grid-column-start: 1;
+      grid-column: 1 / -1;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #ScreenColum {
+      grid-column-start: 2;
+      margin-left: none;
+      margin-left: none;
+      margin-right: none;
+    }
+  }
+  @media (min-width: 1280px) {
+    #ScreenColum {
+      grid-column-start: 2;
+      margin-left: 2%;
+      /* margin-left: auto;
+      margin-right: auto; */
+    }
+  }
+  
