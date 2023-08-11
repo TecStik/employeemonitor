@@ -61,7 +61,7 @@ export default function AttendanceTable() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </h1>
 
-          <div class="container px-5 py-5 mx-auto flex flex-wrap bg-gray-100">
+          <div class="container px-5 py-5 mx-auto flex flex-wrap ">
             <div class="flex flex-wrap -mx-4 -mt-4 mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
               <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
                 <h2 class="title-font font-medium text-2xl text-gray-900">
@@ -106,9 +106,9 @@ export default function AttendanceTable() {
                     <span class="title-font font-medium">Time In</span>
                   </span>
                 </button>
-                <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+                <button class="bg-gray-200 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
                   <svg
-                    class="w-6 h-6 text-gray-200 dark:text-white"
+                    class="w-6 h-6 text-gray-800 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
