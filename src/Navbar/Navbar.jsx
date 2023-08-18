@@ -14,7 +14,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaRegComments } from "react-icons/fa";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
-import { TimeTicket, AttendanceTable } from "../Pages/pages";
+import { TimeTicket, AttendanceTable, EmployeeForm } from "../Pages/pages";
 
 import TaskTable from "../Pages/TaskTable/TaskTable";
 
@@ -66,6 +66,15 @@ function Navbar() {
                 <CgProfile className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
                   TimeTicket
+                </h3>
+              </div>
+              <div
+                className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
+                onClick={() => setTrigger(4)}
+              >
+                <CgProfile className="text-2xl text-gray-600 group-hover:text-white " />
+                <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
+                  Employee Form
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
@@ -207,6 +216,10 @@ function Navbar() {
           ) : trigger === 3 ? (
             <>
               <TimeTicket />
+            </>
+          ) : trigger === 4 ? (
+            <>
+              <EmployeeForm />
             </>
           ) : (
             <></>

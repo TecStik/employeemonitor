@@ -63,13 +63,13 @@ export default function AttendanceTable() {
 
           <div class="container px-5 py-5 mx-auto flex flex-wrap ">
             <div class="flex flex-wrap -mx-4 -mt-4 mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-              <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <div class="ml-4 p-2 sm:w-1/2 sm:ml-0 lg:w-1/4 w-1/2">
                 <h2 class="title-font font-medium text-2xl text-gray-900">
                   4002
                 </h2>
-                <p class="leading-relaxed"> Attendance ID </p>
+                <p class="leading-relaxed">Attendance Id</p>
               </div>
-              <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <div class="p-4 sm:w-1/2 sm:ml-0 lg:ml-10  lg:w-1/4 w-1/2">
                 <h2 class="title-font font-medium text-2xl text-gray-900">
                   8/3/2023
                 </h2>
@@ -80,7 +80,7 @@ export default function AttendanceTable() {
             {/* <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
               Chart
             </h2> */}
-            <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-5 flex flex-col md:ml-auto">
+            <div class="lg:w-1/3 md:w-1/2 bg-gray-100 rounded-lg p-5 flex flex-col md:ml-auto relative z-10 ">
               <Pie data={data1} />
             </div>
             <div
