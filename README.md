@@ -1,224 +1,252 @@
-     <div class="flex flex-col flex-grow border-4 border-gray-400 border-dashed bg-white rounded mt-4">
-        <div>
-          <main class="bg-white-medium flex-1 p-3 overflow-hidden">
-            <div class="flex flex-col">
-              <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
-                <div class="mb-2 mx-2 border-solid border-gray-300 rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
-                  <div class="bg-gray-200 px-2 py-3 border-solid border-gray-300 border-b">
-                    Task One: React Native
-                  </div>
-                  <div class="p-3">
-                    <button
-                      data-modal="toppedModal"
-                      class="modal-trigger bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      onClick={showModal}
-                    >
-                      Open Modal
-                    </button>
-                  </div>
-                </div>
+Hi Team, 
 
-                <div class="mb-2 mx-2 border-solid border-gray-300 rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
-                  <div class="bg-gray-200 px-2 py-3 border-solid border-gray-300 border-b">
-                    Task Two: Digital Marketing
-                  </div>
-                  <div class="p-3">
-                    <button
-                      data-modal="centeredModal"
-                      class="modal-trigger bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      onClick={showModal}
-                    >
-                      Open modal
-                    </button>
-                  </div>
-                </div>
-              </div>
+ 
 
-              <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
-                <div class="mb-2 mx-2 border-solid border-gray-300  rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
-                  <div class="bg-gray-200 px-2 py-3 border-solid border-gray-300 border-b">
-                    Task Three: Website
-                  </div>
-                  <div class="p-3">
-                    <button
-                      data-modal="centeredFormModal"
-                      class="modal-trigger bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      onClick={showModal}
-                    >
-                      Open modal
-                    </button>
-                  </div>
-                </div>
+Welcome on-Board, Please read the complete email to understand the process of integration (Page Redirection v2.0).
 
-                <div class="mb-2 mx-2 border-solid border-gray-300  rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
-                  <div class="bg-gray-200 px-2 py-3 border-solid border-gray-300 border-b">
-                    Task Four: Grafic Designing
-                  </div>
-                  <div class="p-3">
-                    <button
-                      data-modal="largeSizeModal"
-                      class="modal-trigger bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      onClick={showModal}
-                    >
-                      Open modal
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
+ 
 
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-10 mx-auto">
-              <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-                  Task Record
-                </h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  dolorem quidem, eius nesciunt natus id harum accusantium
-                  debitis error doloribus ex tempora
-                </p>
-              </div>
+To initiate the integration, kindly signup on the below URL. Please find the attached sandbox signup guide and share the merchant ID with us. Our team will enable the parameters for you.
 
-              {/* <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                      Learn More
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                      Button
-                    </button>
-                  </div> */}
-            </div>
-          </section>
-        </div>
-      </div>
+ 
 
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <div class="overlay close-modal"></div>
-        <div class="">
-          <div class=" p-5">
-            {/* <!-- Modal content --> */}
-            <form id="form_id" class="w-full">
-              <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/2 px-3">
-                  <label
-                    class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
-                    for="grid-first-name"
-                  >
-                    Task Name
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600"
-                    id="grid-last-name"
-                    type="text"
-                    placeholder="Doe"
-                  />
-                </div>
-                <div class="w-full md:w-1/2 px-3">
-                  <label
-                    class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
-                    for="grid-last-name"
-                  >
-                    Duration
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600"
-                    id="grid-last-name"
-                    type="text"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-wrap -mx-3 mb-2">
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                  <label
-                    class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
-                    for="grid-city"
-                  >
-                    Date
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                    id="grid-city"
-                    type="date"
-                    placeholder="Albuquerque"
-                  />
-                </div>
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                  <label
-                    class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
-                    for="grid-zip"
-                  >
-                    Start Time
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                    id="grid-zip"
-                    type="text"
-                    placeholder="90210"
-                  />
-                </div>
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                  <label
-                    class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
-                    for="grid-zip"
-                  >
-                    End Time
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                    id="grid-zip"
-                    type="text"
-                    placeholder="90210"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                  <label
-                    class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
-                    for="grid-password"
-                  >
-                    descriprion
-                  </label>
-                  <input
-                    class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                    id="grid-password"
-                    type="text"
-                    placeholder="descriprion"
-                  />
-                  <p class="text-grey-dark text-xs italic">
-                    Make it as long and as crazy as you'd like
-                  </p>
-                </div>
-              </div>
+https://sandbox.jazzcash.com.pk/sandbox
 
-              <div class="mt-5">
-                <button class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
-                  Submit
-                </button>{" "}
-                <button class="close-modal cursor-pointer bg-red-500 hover:bg-red-700 text-red-900 font-bold py-2 px-4 rounded">
-                  Close
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </Modal>
+ 
+
+Visit the below link after signup to generate your testing credentials: 
+
+https://sandbox.jazzcash.com.pk/Sandbox/Home/GettingStarted#
+
+ 
+
+Once sign up done, then log in and click on sandbox testing left side navbar option and where click on HTTP POST Redirection for code level implementation instructions. 
+
+ 
+
+Integration Guide: 
+
+·                Web Forms to be implemented. 
+
+·                Request Code to be implemented on the server-side. 
+
+·                Return should be the same as in the sandbox and in code. 
+
+·                Parameters to call as per the PHP sample code attached for assistance. 
+
+·                Transaction Logs can be viewed at following path HTTP Redirection v 2.0 a View Call Logs 
+
+·                For details related to parameters reference to sandbox documentation. 
+
+ 
+
+Suggestion: 
+
+Create a web form at request side to implement JazzCash for PGW Landing. 
+Transaction Date Time format as YYYYMMDDHHMMSS 
+Transaction Ref No must be unique 
+ 
+
+Secure Hash Calculation: 
+
+Concatenate all parameters from A-Z format and join with Integrity Salt to generate SHA-256 HMAC. Secure hash logic must be written in server-side language (e.g php,c# etc).
+
+ 
+
+ 
+
+For Mobile Application same redirection code will be used in web-view. 
+
+ 
+
+Testing: 
+
+ 
+
+After the configurations, perform few test transactions take the screenshots of the transactions and share the testing results. 
+
+ 
+
+Mobile Account 
+Voucher Payment 
+Credit/Debit 
+ 
+
+The below screenshots are needed in testing against each payment method: 
+
+Merchant Checkout page 
+Our landing page 
+Payment method selection 
+Payment 
+Payment Response against the attempted payment on the Merchant Callback URL 
+Order status from Merchant Admin Panel 
+ 
+
+Paste all the screenshot as per the attached word file and share the testing results by simply attaching and replying in the same email thread. 
+
+ 
+
+In case of any query, feel free to contact us. 
+
+ 
+
+Sample PHP CODE for JazzCash Implementation Page Redirection (v2.0): 
+
+ 
+
+                <?php
+
+ 
+
+    // Production/Sandbox Credentials
+
+ 
+
+    // $MerchantID    = ""; //Your Merchant from transaction Credentials
+
+    // $Password      = ""; //Your Password from transaction Credentials
+
+    // $HashKey = ""; //Your HashKey/integrity salt from transaction Credentials    
+
+    // $ReturnURL     = ""; //Your Return URL, It must be static
+
+ 
+
+ 
+
+    // *** for sandbox testing environment
+
+    $PostURL = "https://sandbox.jazzcash.com.pk/CustomerPortal/transactionmanagement/merchantform/";
+
+ 
+
+    // *** for production environment
+
+    //$PostURL = "https://payments.jazzcash.com.pk/CustomerPortal/transactionmanagement/merchantform";
+
+ 
+
+    date_default_timezone_set("Asia/karachi");
+
+    $Amount = 1 * 100; //Last two digits will be considered as Decimal
+
+    $BillReference = "billRef"; //use AlphaNumeric only
+
+    $Description = "Product test description"; //use AlphaNumeric only
+
+    $IsRegisteredCustomer = "No"; // do not change it
+
+    $Language = "EN"; // do not change it
+
+    $TxnCurrency = "PKR"; // do not change it (JAZZCASH Payment gateway only deals in ‘PKR’)
+
+    $TxnDateTime = date('YmdHis');
+
+    $TxnExpiryDateTime = date('YmdHis', strtotime('+1 Days'));
+
+    $TxnRefNumber = "First three letter domain name" . date('YmdHis') . mt_rand(10, 100); // You can customize it (only Max 20 Alpha-Numeric characters)
+
+ 
+
+    $TxnType = ""; // Leave it empty
+
+    $Version = '2.0';
+
+    $SubMerchantID = ""; // Leave it empty
+
+    $BankID = ""; // Leave it empty
+
+    $ProductID = ""; // Leave it empty
+
+    $ppmpf_1 = ""; // use to store extra details (use AlphaNumeric only)
+
+    $ppmpf_2 = ""; // use to store extra details (use AlphaNumeric only)
+
+    $ppmpf_3 = ""; // use to store extra details (use AlphaNumeric only)
+
+    $ppmpf_4 = ""; // use to store extra details (use AlphaNumeric only)
+
+    $ppmpf_5 = ""; // use to store extra details (use AlphaNumeric only)
+
+ 
+
+    $HashArray = [$Amount, $BankID, $BillReference, $Description, $IsRegisteredCustomer, $Language, $MerchantID, $Password, $ProductID, $ReturnURL, $TxnCurrency, $TxnDateTime, $TxnExpiryDateTime, $TxnRefNumber, $TxnType, $Version, $ppmpf_1, $ppmpf_2, $ppmpf_3, $ppmpf_4, $ppmpf_5];
+
+ 
+
+    $SortedArray = $HashKey;
+
+    for ($i = 0; $i < count($HashArray); $i++) {
+
+        if ($HashArray[$i] != 'undefined' and $HashArray[$i] != null and $HashArray[$i] != "") {
+
+
+            $SortedArray .= "&" . $HashArray[$i];
+
+        }
+
+    }
+     $Securehash = hash_hmac('sha256', $SortedArray, $HashKey);
+
+    ?>
+
+    <div id="header">
+
+        <form method="post" action="<?php echo $PostURL; ?>" >
+
+        <input type="text" name="pp_Version" value="<?php echo $Version; ?>" />
+
+        <input type="text" name="pp_TxnType" placeholder="TxnType" value="<?php echo $TxnType; ?>" />
+
+        <input type="text" name="pp_Language" value="<?php echo $Language; ?>" />
+
+        <input type="text" name="pp_MerchantID" value="<?php echo $MerchantID; ?>" />
+
+        <input type="hidden" name="pp_SubMerchantID" value="<?php echo $SubMerchantID; ?>" />
+
+        <input type="password" name="pp_Password" value="<?php echo $Password; ?>" />
+
+        <input type="text" name="pp_TxnRefNo" value="<?php echo $TxnRefNumber; ?>" />
+
+        <input type="text" name="pp_Amount" value="<?php echo $Amount; ?>" />
+
+        <input type="text" name="pp_TxnCurrency" value="<?php echo $TxnCurrency; ?>" />
+
+        <input type="text" name="pp_TxnDateTime" value="<?php echo $TxnDateTime; ?>" />
+
+        <input type="text" name="pp_BillReference" value="<?php echo $BillReference ?>" />
+
+        <input type="text" name="pp_Description" value="<?php echo $Description; ?>" />
+
+        <input type="hidden" name="pp_IsRegisteredCustomer" value="<?php echo $IsRegisteredCustomer; ?>" />
+
+        <input type="hidden" id="pp_BankID" name="pp_BankID" value="<?php echo $BankID ?>" />
+
+        <input type="hidden" id="pp_ProductID" name="pp_ProductID" value="<?php echo $ProductID ?>" />
+
+        <input type="text" name="pp_TxnExpiryDateTime" value="<?php echo  $TxnExpiryDateTime; ?>" />
+
+        <input type="text" name="pp_ReturnURL" value="<?php echo $ReturnURL; ?>" />
+
+        <input type="text" name="pp_SecureHash" value="<?php echo $Securehash; ?>" />
+
+        <input type="text" name="ppmpf_1" placeholder="ppmpf_1" value="<?php echo $ppmpf_1; ?>" />
+
+        <input type="text" name="ppmpf_2" placeholder="ppmpf_2" value="<?php echo $ppmpf_2; ?>" />
+
+        <input type="text" name="ppmpf_3" placeholder="ppmpf_3" value="<?php echo $ppmpf_3; ?>" />
+
+        <input type="text" name="ppmpf_4" placeholder="ppmpf_4" value="<?php echo $ppmpf_4; ?>" />
+
+        <input type="text" name="ppmpf_5" placeholder="ppmpf_5" value="<?php echo $ppmpf_5; ?>" />
+        <br /> <br /> <br />
+
+        <button id="submit" type="submit">submit</button>
+
+        </form>
+
+ 
+
+    </div>
+
+ 
