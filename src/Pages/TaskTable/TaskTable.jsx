@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button, Modal } from "antd";
 import axios from "axios";
 import TaskTableModal from "./TaskTableModal";
+import UseModal from "../UseModal/Modal";
 
 // import "./TaskTable.css";
 
@@ -70,12 +71,18 @@ export default function TaskTable() {
   console.log(FilterData.length === 0, "kkkk");
   return (
     <>
-      <TaskTableModal
+      <UseModal
         Valuedata={Valuedata}
         isModalOpen={isModalOpen}
         handleOk={handleOk}
         handleCancel={handleCancel}
       />
+      {/* <TaskTableModal
+        Valuedata={Valuedata}
+        isModalOpen={isModalOpen}
+        handleOk={handleOk}
+        handleCancel={handleCancel}
+      /> */}
       ;{/* <Navbar /> */}
       <h1 class="font-bold text-2xl text-gray-700">Task Table</h1>
       <div class="flex flex-col flex-grow border-4 border-gray-400 border-dashed bg-white rounded mt-4">

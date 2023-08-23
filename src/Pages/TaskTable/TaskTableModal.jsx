@@ -6,7 +6,7 @@ export default function TaskTableModal({
   handleCancel,
   Valuedata,
 }) {
-//   console.log(Valuedata, "=====>data");
+  //   console.log(Valuedata, "=====>data");
   return (
     <>
       <Modal
